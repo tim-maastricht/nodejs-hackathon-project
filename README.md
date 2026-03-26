@@ -1,4 +1,5 @@
-# Node.js Hackathon Project
+# smallog
+## Node.js Hackathon Project
 
 ### Reason For Existence 
 Regular logging bores me. Stack traces in the terminal are long,
