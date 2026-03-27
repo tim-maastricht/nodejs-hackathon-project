@@ -36,4 +36,6 @@ log.nestEnd = function() {
   console.groupEnd();
 }
 
+// TODO: add full suite of logs
+
 module.exports = log;
