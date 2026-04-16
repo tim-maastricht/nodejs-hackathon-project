@@ -12,24 +12,24 @@ function shortStack() {
 }
 
 // Generic log function
-function log(arg) {
-  return console.log(blue + arg);
+function log(...args) {
+  return console.log(blue,  ...args);
 }
 
 // Success function
-log.win = function (arg) {
-  console.log(green + "[-- SUCCESS --] " + "\n" + arg);
+log.win = function (...args) {
+  console.log(green + "[-- SUCCESS --] " + "\n", ...args);
 };
 
 // failure log function with short stack trace
-log.fail = function (arg) {
+log.fail = function (...args) {
   const trace = shortStack();
-  console.error(red + "[-- FAIL --]" + "\n" + arg + "\n" + trace);
+  console.error(red + "[-- FAIL --]" + "\n", ...args, "\n" + trace);
 };
 
 // log grouping if you're into that sort of thing
-log.nest = function(arg) {
-  console.group(magenta + arg);
+log.nest = function(...args) {
+  console.group(magenta, ...args);
 }
 
 log.nestEnd = function() {
